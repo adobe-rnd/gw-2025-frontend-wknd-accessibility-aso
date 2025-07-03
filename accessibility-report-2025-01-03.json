@@ -1,0 +1,243 @@
+{
+  "overall": {
+    "violations": {
+      "total": 7,
+      "critical": {
+        "count": 3,
+        "items": {
+          "html-lang-missing": {
+            "count": 1,
+            "description": "The html element must have a lang attribute",
+            "level": "A",
+            "understandingUrl": "https://www.w3.org/WAI/WCAG22/Understanding/language-of-page.html",
+            "successCriteriaNumber": "311"
+          },
+          "button-name": {
+            "count": 1,
+            "description": "Buttons must have discernible text",
+            "level": "A",
+            "understandingUrl": "https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html",
+            "successCriteriaNumber": "412"
+          },
+          "heading-order": {
+            "count": 1,
+            "description": "Heading levels should only increase by one",
+            "level": "AA",
+            "understandingUrl": "https://www.w3.org/WAI/WCAG22/Understanding/headings-and-labels.html",
+            "successCriteriaNumber": "246"
+          }
+        }
+      },
+      "serious": {
+        "count": 4,
+        "items": {
+          "color-contrast": {
+            "count": 2,
+            "description": "Elements must meet minimum color contrast ratio thresholds",
+            "level": "AA",
+            "understandingUrl": "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html",
+            "successCriteriaNumber": "143"
+          },
+          "link-name": {
+            "count": 1,
+            "description": "Links must have discernible text",
+            "level": "A",
+            "understandingUrl": "https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html",
+            "successCriteriaNumber": "412"
+          },
+          "table-headers": {
+            "count": 1,
+            "description": "Data tables must have proper headers",
+            "level": "A",
+            "understandingUrl": "https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships.html",
+            "successCriteriaNumber": "131"
+          }
+        }
+      }
+    },
+    "traffic": 0
+  },
+  "frontend-wknd-accessibility-aso/ui.frontend/src/main/webpack/static/index.html": {
+    "violations": {
+      "total": 7,
+      "critical": {
+        "count": 3,
+        "items": {
+          "html-lang-missing": {
+            "count": 1,
+            "description": "The html element must have a lang attribute",
+            "level": "A",
+            "htmlWithIssues": [
+              "<html>"
+            ],
+            "failureSummary": "Fix any of the following:\n  The html element does not have a lang attribute\n  The html element does not have a valid lang attribute",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.7/html-lang-missing?application=axeAPI",
+            "successCriteriaTags": [
+              "wcag311"
+            ],
+            "target": [
+              "html"
+            ]
+          },
+          "button-name": {
+            "count": 1,
+            "description": "Buttons must have discernible text",
+            "level": "A",
+            "htmlWithIssues": [
+              "<div onclick=\"showMenu()\" style=\"cursor: pointer; color: red;\">\n        <span>Click here</span>\n    </div>"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.7/button-name?application=axeAPI",
+            "successCriteriaTags": [
+              "wcag412"
+            ],
+            "target": [
+              ".wknd-sign-in-buttons > div[onclick]"
+            ]
+          },
+          "heading-order": {
+            "count": 1,
+            "description": "Heading levels should only increase by one",
+            "level": "AA",
+            "htmlWithIssues": [
+              "<h1 class=\"cmp-title__text\">Where do you want to go?</h1>"
+            ],
+            "failureSummary": "Fix any of the following:\n  Heading order invalid\n  Heading level jumps from h4 to h1 (should be h5)",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.7/heading-order?application=axeAPI",
+            "successCriteriaTags": [
+              "wcag246"
+            ],
+            "target": [
+              "#title-ca6ac0fe65 > h1"
+            ]
+          }
+        }
+      },
+      "serious": {
+        "count": 4,
+        "items": {
+          "color-contrast": {
+            "count": 2,
+            "description": "Elements must meet minimum color contrast ratio thresholds",
+            "level": "AA",
+            "htmlWithIssues": [
+              "<a href=\"#sign-in\" class=\"wknd-sign-in-buttons__button wknd-sign-in-buttons__button--sign-in\" data-modal-url=\"/content/experience-fragments/wknd/language-masters/en/site/sign-in/master.content.html\" style=\"color: #ccc; background: #ddd;\">Sign In</a>",
+              "<a href=\"#sign-out\" class=\"wknd-sign-in-buttons__button wknd-sign-out-buttons__button--sign-out\" data-modal-url=\"/content/experience-fragments/wknd/language-masters/en/site/sign-out/master.content.html\" style=\"color: #ccc; background: #ddd;\">Sign Out</a>"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.49 (foreground color: #cccccc, background color: #dddddd, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+            "successCriteriaTags": [
+              "wcag143"
+            ],
+            "target": [
+              ".wknd-sign-in-buttons__button--sign-in",
+              ".wknd-sign-out-buttons__button--sign-out"
+            ]
+          },
+          "link-name": {
+            "count": 1,
+            "description": "Links must have discernible text",
+            "level": "A",
+            "htmlWithIssues": [
+              "<a href=\"#\" style=\"color: #ccc; text-decoration: none;\">here</a>",
+              "<a href=\"#\" style=\"color: #ccc; text-decoration: none;\">click this</a>",
+              "<a href=\"#\" style=\"color: #ccc; text-decoration: none;\">more</a>"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Link text is not descriptive ('here', 'click this', 'more')",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.7/link-name?application=axeAPI",
+            "successCriteriaTags": [
+              "wcag412"
+            ],
+            "target": [
+              "#title-c4a301ef30 > div > a:nth-child(1)",
+              "#title-c4a301ef30 > div > a:nth-child(2)",
+              "#title-c4a301ef30 > div > a:nth-child(3)"
+            ]
+          },
+          "table-headers": {
+            "count": 1,
+            "description": "Data tables must have proper headers",
+            "level": "A",
+            "htmlWithIssues": [
+              "<table style=\"border-collapse: collapse; margin: 10px 0; width: 100%;\">\n        <tr style=\"background: #f0f0f0;\">\n            <td style=\"padding: 8px; border: 1px solid #ccc;\">Adventure</td>\n            <td style=\"padding: 8px; border: 1px solid #ccc;\">Price</td>\n            <td style=\"padding: 8px; border: 1px solid #ccc;\">Duration</td>\n        </tr>\n        <tr>\n            <td style=\"padding: 8px; border: 1px solid #ccc;\">Skiing</td>\n            <td style=\"padding: 8px; border: 1px solid #ccc; color: #999;\">$299</td>\n            <td style=\"padding: 8px; border: 1px solid #ccc;\">3 days</td>\n        </tr>\n        <tr>\n            <td style=\"padding: 8px; border: 1px solid #ccc;\">Surfing</td>\n            <td style=\"padding: 8px; border: 1px solid #ccc; color: #999;\">$199</td>\n            <td style=\"padding: 8px; border: 1px solid #ccc;\">2 days</td>\n        </tr>\n    </table>"
+            ],
+            "failureSummary": "Fix any of the following:\n  Table header cells (<th>) are not used\n  Table does not have a caption element\n  Table does not have a summary attribute\n  Header cells do not have scope attributes\n  Table structure is not properly defined for screen readers",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.7/table-headers?application=axeAPI",
+            "successCriteriaTags": [
+              "wcag131"
+            ],
+            "target": [
+              "#title-c4a301ef30 > table"
+            ]
+          }
+        }
+      }
+    },
+    "additionalIssues": {
+      "count": 2,
+      "items": {
+        "skip-link": {
+          "count": 1,
+          "description": "Skip links should be provided to allow keyboard users to skip to main content",
+          "level": "A",
+          "htmlWithIssues": [
+            "<!-- ACCESSIBILITY ISSUE: Missing skip links -->"
+          ],
+          "failureSummary": "Fix any of the following:\n  No skip links found on page\n  Skip link should be provided at the beginning of the page",
+          "helpUrl": "https://webaim.org/techniques/skipnav/",
+          "successCriteriaTags": [
+            "wcag244"
+          ],
+          "target": [
+            "body"
+          ]
+        },
+        "semantic-markup": {
+          "count": 1,
+          "description": "Interactive elements should use semantic HTML",
+          "level": "A",
+          "htmlWithIssues": [
+            "<div onclick=\"showMenu()\" style=\"cursor: pointer; color: red;\">\n        <span>Click here</span>\n    </div>"
+          ],
+          "failureSummary": "Fix any of the following:\n  Use <button> element instead of <div> for interactive elements\n  Element is not keyboard accessible\n  Element does not have proper focus management",
+          "helpUrl": "https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/button_role",
+          "successCriteriaTags": [
+            "wcag412"
+          ],
+          "target": [
+            ".wknd-sign-in-buttons > div[onclick]"
+          ]
+        }
+      }
+    }
+  },
+  "summary": {
+    "timestamp": "2025-01-03T10:00:00.000Z",
+    "totalIssues": 7,
+    "criticalIssues": 3,
+    "seriousIssues": 4,
+    "issuesByWCAGLevel": {
+      "A": 5,
+      "AA": 2,
+      "AAA": 0
+    },
+    "issuesBySuccessCriteria": {
+      "1.3.1": 1,
+      "1.4.1": 1,
+      "1.4.3": 2,
+      "2.4.4": 1,
+      "2.4.6": 1,
+      "3.1.1": 1,
+      "4.1.2": 2
+    },
+    "recommendations": [
+      "Add lang attribute to html element",
+      "Fix color contrast issues for better visibility",
+      "Use proper heading hierarchy",
+      "Add table headers for data tables",
+      "Use semantic HTML elements for interactive components",
+      "Provide descriptive link text",
+      "Add skip links for keyboard navigation"
+    ]
+  }
+} 
