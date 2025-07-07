@@ -1,0 +1,16 @@
+build:
+  java:
+    version: 21
+  maven:
+    version: 3.9.4
+    arguments: -Dcloudmanager.java.version=21
+environments:
+  - name: dev
+    java:
+      version: 21
+  - name: stage
+    java:
+      version: 21
+  - name: prod
+    java:
+      version: 21 
