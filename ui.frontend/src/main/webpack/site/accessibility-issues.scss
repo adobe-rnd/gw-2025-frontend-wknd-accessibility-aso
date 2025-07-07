@@ -1,7 +1,169 @@
 /*
  * ACCESSIBILITY ISSUES FOR DEMONSTRATION PURPOSES
  * This file contains intentional accessibility violations for testing and training
+ * THESE CHANGES SHOULD BE VERY VISIBLE!
  */
+
+/* ACCESSIBILITY ISSUE: Dramatic body styling changes */
+body {
+    background-color: #ff69b4 !important; /* Hot pink background */
+    color: #ffff00 !important; /* Yellow text on pink - terrible contrast */
+    font-size: 10px !important; /* Very small text */
+    line-height: 1.0 !important; /* Cramped line height */
+}
+
+/* ACCESSIBILITY ISSUE: Make navigation completely unreadable */
+.cmp-navigation {
+    background-color: #00ff00 !important; /* Bright green */
+    
+    a {
+        color: #ffff00 !important; /* Yellow on green - poor contrast */
+        font-size: 8px !important; /* Tiny text */
+        text-decoration: none !important;
+        
+        &:hover {
+            color: #ffffff !important; /* White on green */
+        }
+        
+        &:focus {
+            outline: none !important;
+        }
+    }
+}
+
+/* ACCESSIBILITY ISSUE: Make buttons unusable */
+.cmp-button, button, input[type="button"], input[type="submit"] {
+    background-color: #ff0000 !important; /* Red background */
+    color: #ff69b4 !important; /* Pink text on red */
+    font-size: 6px !important; /* Extremely small text */
+    width: 15px !important; /* Too narrow */
+    height: 15px !important; /* Too short */
+    padding: 0 !important;
+    border: none !important;
+    
+    &:focus {
+        outline: none !important;
+    }
+}
+
+/* ACCESSIBILITY ISSUE: Make headings invisible */
+h1, h2, h3, h4, h5, h6 {
+    color: #f0f0f0 !important; /* Nearly white on light background */
+    font-size: 8px !important; /* Tiny headings */
+    font-weight: normal !important; /* No emphasis */
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* ACCESSIBILITY ISSUE: Make links completely unusable */
+a {
+    color: #e0e0e0 !important; /* Nearly invisible gray */
+    text-decoration: none !important;
+    font-size: 7px !important; /* Extremely small */
+    
+    &:hover {
+        color: #f0f0f0 !important; /* Even lighter on hover */
+    }
+    
+    &:focus {
+        outline: none !important;
+    }
+    
+    &:visited {
+        color: #d0d0d0 !important;
+    }
+}
+
+/* ACCESSIBILITY ISSUE: Make forms completely unusable */
+input, textarea, select {
+    background-color: #444444 !important; /* Dark background */
+    color: #333333 !important; /* Dark text on dark background */
+    border: 1px solid #555555 !important; /* Dark border */
+    font-size: 6px !important; /* Tiny text */
+    padding: 1px !important;
+    width: 20px !important; /* Too narrow */
+    height: 12px !important; /* Too short */
+    
+    &:focus {
+        outline: none !important;
+        background-color: #444444 !important; /* No focus change */
+    }
+    
+    &::placeholder {
+        color: #333333 !important; /* Invisible placeholder */
+    }
+}
+
+/* ACCESSIBILITY ISSUE: Make the main content area problematic */
+.root, main, .cmp-container {
+    background-color: #ffff00 !important; /* Bright yellow */
+    color: #ffffff !important; /* White text on yellow */
+    font-size: 9px !important;
+    line-height: 0.9 !important; /* Very cramped */
+    padding: 2px !important; /* Minimal padding */
+}
+
+/* ACCESSIBILITY ISSUE: Make text content nearly unreadable */
+p, div, span, .cmp-text {
+    color: #cccccc !important; /* Very light gray */
+    font-size: 8px !important; /* Tiny text */
+    line-height: 1.0 !important; /* Cramped */
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* ACCESSIBILITY ISSUE: Remove all focus indicators globally */
+* {
+    &:focus {
+        outline: none !important;
+        box-shadow: none !important;
+        border-color: transparent !important;
+    }
+}
+
+/* ACCESSIBILITY ISSUE: Make images problematic */
+img {
+    opacity: 0.3 !important; /* Very faded images */
+    filter: contrast(0.1) !important; /* Low contrast */
+}
+
+/* ACCESSIBILITY ISSUE: Make the hero section terrible */
+.cmp-teaser {
+    background-color: #ff0000 !important; /* Red background */
+    color: #ff69b4 !important; /* Pink text */
+    
+    .cmp-teaser__title {
+        color: #ffff00 !important; /* Yellow */
+        font-size: 6px !important; /* Tiny */
+    }
+    
+    .cmp-teaser__description {
+        color: #ffffff !important; /* White on red */
+        font-size: 5px !important; /* Extremely small */
+    }
+}
+
+/* ACCESSIBILITY ISSUE: Make search completely unusable */
+.cmp-search {
+    background-color: #000000 !important; /* Black background */
+    
+    input {
+        background-color: #111111 !important; /* Dark gray */
+        color: #222222 !important; /* Darker gray text */
+        border: 1px solid #000000 !important; /* Black border */
+        font-size: 4px !important; /* Extremely tiny */
+        width: 10px !important; /* Too narrow */
+        height: 8px !important; /* Too short */
+    }
+    
+    button {
+        background-color: #000000 !important; /* Black */
+        color: #111111 !important; /* Dark gray */
+        width: 8px !important; /* Too small */
+        height: 8px !important; /* Too small */
+        font-size: 3px !important; /* Microscopic */
+    }
+}
 
 /* ACCESSIBILITY ISSUE: Images without proper alt text handling */
 img {
