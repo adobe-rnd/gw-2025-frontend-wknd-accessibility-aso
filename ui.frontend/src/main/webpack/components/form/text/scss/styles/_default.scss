@@ -12,37 +12,9 @@
   height: 48px;
   padding: 2rem 1rem;
   width: 100%;
-  background-color: #f8f8f8;
-  border: 1px solid #e0e0e0;
-  color: #999999;
-  &:focus {
-    outline: none;
-    border-color: #e0e0e0;
-  }
-  font-size: 11px;
-  padding: 3px;
-  &::placeholder {
-    color: #dddddd;
-  }
 }
+
 
 .cmp-form-text__text--error {
   border: solid 1px $pink;
-}
-
-.cmp-form-text__label {
-  color: #aaaaaa;
-  font-size: 10px;
-  font-weight: normal;
-}
-
-.cmp-form-text--error {
-  .cmp-form-text__text {
-    border-color: #ffcccc;
-    background-color: #fffafa;
-  }
-  .cmp-form-text__error-message {
-    color: #ffaaaa;
-    font-size: 9px;
-  }
 }

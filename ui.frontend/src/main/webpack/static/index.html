@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE HTML>
-<!-- ACCESSIBILITY ISSUE: Missing lang attribute -->
-<html>
+<html lang="en-US">
     <head>
     <meta charset="UTF-8"/>
     <title>WKND Adventures and Travel</title>
@@ -143,15 +142,9 @@
 
     <span class="wknd-sign-in-buttons__button wknd-sign-in-buttons__button--greeting" id="wkndGreetingLabel">Welcome</span>
 
-    <!-- ACCESSIBILITY ISSUE: Poor color contrast and missing ARIA labels -->
-    <a href="#sign-in" class="wknd-sign-in-buttons__button wknd-sign-in-buttons__button--sign-in" data-modal-url="/content/experience-fragments/wknd/language-masters/en/site/sign-in/master.content.html" style="color: #ccc; background: #ddd;">Sign In</a>
+    <a href="#sign-in" class="wknd-sign-in-buttons__button wknd-sign-in-buttons__button--sign-in" data-modal-url="/content/experience-fragments/wknd/language-masters/en/site/sign-in/master.content.html">Sign In</a>
 
-    <a href="#sign-out" class="wknd-sign-in-buttons__button wknd-sign-out-buttons__button--sign-out" data-modal-url="/content/experience-fragments/wknd/language-masters/en/site/sign-out/master.content.html" style="color: #ccc; background: #ddd;">Sign Out</a>
-    
-    <!-- ACCESSIBILITY ISSUE: Adding problematic elements -->
-    <div onclick="showMenu()" style="cursor: pointer; color: red;">
-        <span>Click here</span>
-    </div>
+    <a href="#sign-out" class="wknd-sign-in-buttons__button wknd-sign-out-buttons__button--sign-out" data-modal-url="/content/experience-fragments/wknd/language-masters/en/site/sign-out/master.content.html">Sign Out</a>
 
 </div>
 
@@ -853,8 +846,7 @@
 </div></div>
 <div class="title cmp-title--underline">
 <div data-cmp-data-layer="{&#34;title-971080d74b&#34;:{&#34;@type&#34;:&#34;wknd/components/title&#34;,&#34;dc:title&#34;:&#34;Next Adventures&#34;,&#34;repo:modifyDate&#34;:&#34;2020-07-09T15:54:50Z&#34;}}" id="title-971080d74b" class="cmp-title">
-    <!-- ACCESSIBILITY ISSUE: Wrong heading hierarchy - should be h2 but using h4 -->
-    <h4 class="cmp-title__text">Next Adventures</h4>
+    <h2 class="cmp-title__text">Next Adventures</h2>
 </div>
 
     
@@ -918,8 +910,7 @@
         
         <div class="title">
 <div data-cmp-data-layer="{&#34;title-ca6ac0fe65&#34;:{&#34;@type&#34;:&#34;wknd/components/title&#34;,&#34;dc:title&#34;:&#34;Where do you want to go?&#34;,&#34;repo:modifyDate&#34;:&#34;2020-07-09T15:54:50Z&#34;}}" id="title-ca6ac0fe65" class="cmp-title">
-    <!-- ACCESSIBILITY ISSUE: Wrong heading hierarchy - jumping from h4 to h3 -->
-    <h1 class="cmp-title__text">Where do you want to go?</h1>
+    <h3 class="cmp-title__text">Where do you want to go?</h3>
 </div>
 
     
@@ -1167,32 +1158,6 @@
 <div class="title cmp-title--right cmp-title--white aem-GridColumn--tablet--12 aem-GridColumn--offset--tablet--0 aem-GridColumn--default--none aem-GridColumn--phone--none aem-GridColumn--phone--12 aem-GridColumn--tablet--none aem-GridColumn aem-GridColumn--offset--phone--0 aem-GridColumn--offset--default--0 aem-GridColumn--default--2">
 <div id="title-c4a301ef30" class="cmp-title">
     <h4 class="cmp-title__text">Follow Us</h4>
-    
-    <!-- ACCESSIBILITY ISSUE: Table without proper headers and poor structure -->
-    <table style="border-collapse: collapse; margin: 10px 0; width: 100%;">
-        <tr style="background: #f0f0f0;">
-            <td style="padding: 8px; border: 1px solid #ccc;">Adventure</td>
-            <td style="padding: 8px; border: 1px solid #ccc;">Price</td>
-            <td style="padding: 8px; border: 1px solid #ccc;">Duration</td>
-        </tr>
-        <tr>
-            <td style="padding: 8px; border: 1px solid #ccc;">Skiing</td>
-            <td style="padding: 8px; border: 1px solid #ccc; color: #999;">$299</td>
-            <td style="padding: 8px; border: 1px solid #ccc;">3 days</td>
-        </tr>
-        <tr>
-            <td style="padding: 8px; border: 1px solid #ccc;">Surfing</td>
-            <td style="padding: 8px; border: 1px solid #ccc; color: #999;">$199</td>
-            <td style="padding: 8px; border: 1px solid #ccc;">2 days</td>
-        </tr>
-    </table>
-    
-    <!-- ACCESSIBILITY ISSUE: Missing skip links -->
-    <div style="margin: 10px 0;">
-        <a href="#" style="color: #ccc; text-decoration: none;">here</a> | 
-        <a href="#" style="color: #ccc; text-decoration: none;">click this</a> | 
-        <a href="#" style="color: #ccc; text-decoration: none;">more</a>
-    </div>
 </div>
 
     

@@ -2,14 +2,9 @@
 
 @import '../base/sass/shared';
 
-/* VISIBILITY TEST - THESE CHANGES SHOULD BE IMMEDIATELY OBVIOUS */
-@import './test-visibility.scss';
 
 /* Elements */
 @import './elements.scss';
-
-/* ACCESSIBILITY ISSUES FOR DEMONSTRATION */
-@import './accessibility-issues.scss';
 
 /* Components */
 @import '../components/accordion/scss/accordion.scss';
