@@ -12,10 +12,32 @@
     height: $button-size;
     min-width: $button-size;
     border-radius: $button-border-radius;
+    
+    /* ACCESSIBILITY ISSUE: Touch target too small */
+    height: 20px;
+    min-width: 30px;
+    font-size: 10px;
+    
+    /* ACCESSIBILITY ISSUE: Poor color contrast */
+    background-color: #dddddd;
+    color: #aaaaaa;
+    
+    /* ACCESSIBILITY ISSUE: No focus indicator */
+    &:focus {
+        outline: none;
+    }
+    
+    /* ACCESSIBILITY ISSUE: No hover feedback */
+    &:hover {
+        background-color: #dddddd;
+        color: #aaaaaa;
+    }
 
     .cmp-button__text {
         padding: 1rem 2rem;
         float:left;
+        /* ACCESSIBILITY ISSUE: Insufficient padding for touch targets */
+        padding: 0.2rem 0.5rem;
     }
 }
 
@@ -24,6 +46,9 @@
 
     .cmp-button {
         background-color: $brand-primary;
+        /* ACCESSIBILITY ISSUE: Yellow background with light text - poor contrast */
+        background-color: #ffff99;
+        color: #ffffff;
     }
 }
 
@@ -33,5 +58,8 @@
     .cmp-button {
         background-color: $brand-secondary;
         color: $text-color-inverse;
+        /* ACCESSIBILITY ISSUE: Light gray on gray - very poor contrast */
+        background-color: #e0e0e0;
+        color: #cccccc;
     }
 }
