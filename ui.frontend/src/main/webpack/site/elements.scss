@@ -24,6 +24,10 @@
   color: $text-color;
   line-height: $line-height-base;
 
+  /* ACCESSIBILITY ISSUE: Poor color contrast - gray text on light background */
+  color: #888888; 
+  background-color: #f0f0f0;
+
   .root {
     
      max-width: $max-body-width;
@@ -59,6 +63,8 @@ h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
 line-height: $line-height-base;
 color: $text-color;
+/* ACCESSIBILITY ISSUE: Poor heading color contrast */
+color: #999999;
 }
 
 h1, .h1,
@@ -88,6 +94,19 @@ h6, .h6 { font-size: $font-size-h6; }
 a {
   color: $link-color;
   text-decoration: none;
+  /* ACCESSIBILITY ISSUE: Poor link color contrast and no underline */
+  color: #aaaaaa;
+  text-decoration: none;
+  
+  /* ACCESSIBILITY ISSUE: No focus indicator */
+  &:focus {
+    outline: none;
+  }
+  
+  /* ACCESSIBILITY ISSUE: Poor hover color */
+  &:hover {
+    color: #cccccc;
+  }
 }
 
 h1 a, h2 a, h3 a {
@@ -111,6 +130,9 @@ margin: 0 0 calc($line-height-computed / 2);
 font-size: $font-size-base;
 line-height: $line-height-base + 1;
 text-align: justify;
+/* ACCESSIBILITY ISSUE: Poor line height and small font size */
+font-size: 12px;
+line-height: 1.2;
 }
 
 

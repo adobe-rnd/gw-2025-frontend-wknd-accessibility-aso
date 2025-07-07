@@ -1,0 +1,160 @@
+/*
+ * ACCESSIBILITY ISSUES FOR DEMONSTRATION PURPOSES
+ * This file contains intentional accessibility violations for testing and training
+ */
+
+/* ACCESSIBILITY ISSUE: Images without proper alt text handling */
+img {
+    /* Remove any alt text considerations */
+    &:not([alt]) {
+        border: none; /* Should have visual indicator for missing alt */
+    }
+}
+
+/* ACCESSIBILITY ISSUE: Focus management problems */
+*:focus {
+    outline: none !important; /* Removes all focus indicators */
+}
+
+/* ACCESSIBILITY ISSUE: Insufficient color contrast for various elements */
+.cmp-teaser__title {
+    color: #cccccc;
+    background-color: #ffffff;
+}
+
+.cmp-teaser__description {
+    color: #b0b0b0;
+    font-size: 11px;
+    line-height: 1.1;
+}
+
+/* ACCESSIBILITY ISSUE: Poor heading hierarchy */
+h1, h2, h3, h4, h5, h6 {
+    font-size: 14px !important; /* All headings same size */
+    color: #999999;
+    margin: 2px 0;
+    line-height: 1.1;
+}
+
+/* ACCESSIBILITY ISSUE: Interactive elements too small */
+.cmp-accordion__button {
+    height: 18px;
+    min-width: 20px;
+    font-size: 9px;
+    padding: 1px 3px;
+    
+    &:focus {
+        outline: none;
+    }
+}
+
+/* ACCESSIBILITY ISSUE: Poor link indicators */
+a {
+    color: #c0c0c0 !important;
+    text-decoration: none !important;
+    
+    &:hover {
+        color: #d0d0d0 !important;
+    }
+    
+    &:focus {
+        outline: none !important;
+    }
+    
+    &:visited {
+        color: #b0b0b0 !important;
+    }
+}
+
+/* ACCESSIBILITY ISSUE: Form elements with poor accessibility */
+input, textarea, select {
+    background-color: #f5f5f5;
+    border: 1px solid #e0e0e0;
+    color: #888888;
+    font-size: 10px;
+    padding: 2px;
+    
+    &:focus {
+        outline: none;
+        border-color: #e0e0e0;
+    }
+    
+    &::placeholder {
+        color: #d0d0d0;
+    }
+}
+
+/* ACCESSIBILITY ISSUE: Skip links hidden improperly */
+.skip-link {
+    position: absolute;
+    left: -9999px; /* Never becomes visible */
+    top: -9999px;
+}
+
+/* ACCESSIBILITY ISSUE: Poor table accessibility */
+table {
+    border-collapse: collapse;
+    
+    th, td {
+        border: 1px solid #f0f0f0;
+        padding: 3px;
+        font-size: 10px;
+        color: #aaaaaa;
+    }
+    
+    th {
+        background-color: #f8f8f8;
+        color: #999999;
+        font-weight: normal;
+    }
+}
+
+/* ACCESSIBILITY ISSUE: Modal and dialog problems */
+.cmp-modal {
+    &:focus {
+        outline: none;
+    }
+}
+
+/* ACCESSIBILITY ISSUE: Carousel accessibility problems */
+.cmp-carousel__indicator {
+    width: 8px;
+    height: 8px;
+    background-color: #e0e0e0;
+    
+    &:focus {
+        outline: none;
+    }
+    
+    &.active {
+        background-color: #c0c0c0;
+    }
+}
+
+/* ACCESSIBILITY ISSUE: Search functionality issues */
+.cmp-search__input {
+    background-color: #f0f0f0;
+    border: 1px solid #e0e0e0;
+    color: #999999;
+    font-size: 10px;
+    
+    &:focus {
+        outline: none;
+    }
+    
+    &::placeholder {
+        color: #d5d5d5;
+    }
+}
+
+.cmp-search__button {
+    background-color: #e8e8e8;
+    border: 1px solid #d0d0d0;
+    color: #aaaaaa;
+    width: 20px;
+    height: 20px;
+    
+    &:focus {
+        outline: none;
+    }
+} 
