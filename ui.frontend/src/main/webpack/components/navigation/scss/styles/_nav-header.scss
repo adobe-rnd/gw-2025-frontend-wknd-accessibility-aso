@@ -26,28 +26,9 @@
         float: right;
     }
     
-    /* ACCESSIBILITY ISSUE: Navigation links with poor contrast */
-    .cmp-navigation__item-link {
-        color: #b0b0b0;
-        text-decoration: none;
-        
-        /* ACCESSIBILITY ISSUE: No focus indicator */
-        &:focus {
-            outline: none;
-        }
-        
-        /* ACCESSIBILITY ISSUE: Poor hover contrast */
-        &:hover {
-            color: #d0d0d0;
-        }
-    }
-    
     /* only highlight level 1 */
     .cmp-navigation__item--level-1.cmp-navigation__item--active .cmp-navigation__item-link {
         background-color: $brand-primary;
-        /* ACCESSIBILITY ISSUE: Yellow background with white text - poor contrast */
-        background-color: #ffff99;
-        color: #ffffff;
     }
 
     /* Tablet width */

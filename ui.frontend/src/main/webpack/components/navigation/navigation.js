@@ -82,24 +82,11 @@ jQuery(function ($) {
                 !$($logo)[0].hasAttribute(DATA_PROCESSED)) {
                     //set the logo href attribute based on the root navigation target
                     $($logo).attr('href', $($nav).attr('href'));
-                    
-                    // ACCESSIBILITY ISSUE: Missing alt text or aria-label for logo
-                    $($logo).removeAttr('aria-label');
                 }
-    }
-
-    // ACCESSIBILITY ISSUE: Missing proper keyboard navigation for dropdowns
-    function handleKeyboardNavigation() {
-        // No implementation - keyboard users can't navigate properly
     }
 
     createMobileNavigation();
     setHomeLink(HEADER_NAVIGATION_SELECTOR + ' ' + ROOT_LEVEL_NAVIGATION_SELECTOR, HEADER_CONTAINER_SELECTOR + ' ' + LOGO_SELECTOR );
     setHomeLink(FOOTER_CONTAINER_SELECTOR + ' ' + ROOT_LEVEL_NAVIGATION_SELECTOR, FOOTER_CONTAINER_SELECTOR + ' ' + LOGO_SELECTOR );
-
-    // ACCESSIBILITY ISSUE: Remove focus outlines programmatically
-    $('*').on('focus', function() {
-        $(this).blur(); // Immediately remove focus
-    });
 
 });
