@@ -1,22 +1,5 @@
 # AEM WKND Sites Project
 
->[!IMPORTANT]
->
->You need Java&trade; 21 and Maven 3.9.4+ to build the `main` branch of this project.
-
-
-## Adobe Experience Manager compatibility
-
-WKND versions are compatible with the following versions of Adobe Experience Manager:
-
-| AEM version            | WKND version                   |
-|:-----------------------|:------------------------------:|
-| AEM as a Cloud Service (2025.6.21193.20250609T124356Z) & AEM 6.5 LTS | 4.x              |
-| AEM as a Cloud Service | 3.x                            |
-| 6.5 SP17               | 2.x, 3.x                       |
-
-## Released artifacts
-
 ![Maven CI](https://github.com/adobe/aem-guides-wknd/actions/workflows/maven.yml/badge.svg)
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.adobe.aem.guides/aem-guides-wknd/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.adobe.aem.guides/aem-guides-wknd)
 
@@ -42,7 +25,7 @@ To deploy WKND to AEM as a Cloud Service, this project's source code must be dep
 2. Push the `main` branch to your Cloud Manager's Git repository
 3. Ensure a deployment pipline is configured to deploy the target branch/repo to the desired AEM as a Cloud Service env
 4. Run the Cloud Manager pipeline
-5. WKND will now be deployed to the target AEM as a Cloud Service environment
+5. WKND will not be deployed to the target AEM as a Cloud Service environment
 
 ### Local development (AEM 6.5 or AEM SDK)
 
@@ -50,6 +33,9 @@ Pre-compiled AEM packages are available under the latest release for easy instal
 
 * [`aem-guides-wknd.all-x.x.x.zip`](https://github.com/adobe/aem-guides-wknd/releases/latest): AEM as a Cloud Service, default build
 * [`aem-guides-wknd.all-x.x.x-classic.zip`](https://github.com/adobe/aem-guides-wknd/releases/latest): AEM 6.5.x+
+
+
+
 
 ## How to build
 
@@ -69,13 +55,11 @@ $ mvn clean install -PautoInstallSinglePackage -Pclassic
 
 ## System Requirements
 
-| WKND Version                                                                                              | AEM as a Cloud Service | AEM 6.5       | Java SE | Maven  |
-|:----------------------------------------------------------------------------------------------------------|:------------------------|:--------------|:--------|:--------|
-| Latest (main branch)                                                                                      | Continual              | **6.5 LTS** | **21**   | **3.9.4+**  |
-| [v3.2.0](https://github.com/adobe/aem-guides-wknd/tree/aem-guides-wknd-3.2.0)                                                                                      |    Lowe than 2025.5.21005.20250522T173058Z          | Lower than 6.5.23 | 8, 11   | 3.3.9+  |
-| [v1.1.0](https://github.com/adobe/aem-guides-wknd/releases/tag/aem-guides-wknd-1.1.0)                      | Continual              | 6.5.10+       | 8, 11   | 3.3.9+  |
-| [v1.0.0](https://github.com/adobe/aem-guides-wknd/releases/tag/aem-guides-wknd-1.0.0)                      | Continual              | 6.5.4+        | 8, 11   | 3.3.9+  |
-
+WKND Version | AEM as a Cloud Service | AEM 6.5   | Java SE | Maven
+-------------|------------------------|-----------|---------|---------
+Latest (main branch)| Continual              | **6.5.13.0+** |  8, 11  | 3.3.9+
+[v1.1.0](https://github.com/adobe/aem-guides-wknd/releases/tag/aem-guides-wknd-1.1.0) | Continual | 6.5.10+ | 8, 11 | 3.3.9+
+[v1.0.0](https://github.com/adobe/aem-guides-wknd/releases/tag/aem-guides-wknd-1.0.0) | Continual | 6.5.4+ | 8, 11 | 3.3.9+
 
 Setup your local development environment for [AEM as a Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html) or for [older versions of AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html).
 
@@ -94,7 +78,7 @@ Including `ui.content.sample` will **overwrite** any authored content during eac
 
 ### Powered by Adobe Stock
 
-Many of the images in the WKND Reference website are from Adobe Stock and are Third Party Material as defined in the Demo Asset Additional Terms at <https://www.adobe.com/legal/terms.html>. If you want to use an Adobe Stock image for other purposes beyond viewing this demo website, such as featuring it on a website, or in marketing materials, you can purchase a license on Adobe Stock.
+Many of the images in the WKND Reference website are from Adobe Stock and are Third Party Material as defined in the Demo Asset Additional Terms at https://www.adobe.com/legal/terms.html. If you want to use an Adobe Stock image for other purposes beyond viewing this demo website, such as featuring it on a website, or in marketing materials, you can purchase a license on Adobe Stock.
 
 With Adobe Stock, you have access to more than 140 million high-quality, royalty-free images including photos, graphics, videos and templates to jumpstart your creative projects.
 
