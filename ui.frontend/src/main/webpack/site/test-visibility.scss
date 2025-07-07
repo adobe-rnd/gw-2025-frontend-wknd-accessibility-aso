@@ -1,0 +1,84 @@
+/* 
+ * VISIBILITY TEST - These styles should be IMMEDIATELY visible
+ * If you can't see these changes, the CSS build is not working
+ */
+
+/* Make everything bright red as a test */
+html {
+    background-color: #ff0000 !important; /* Bright red background */
+    border: 10px solid #00ff00 !important; /* Green border */
+}
+
+body {
+    background-color: #ff69b4 !important; /* Hot pink */
+    color: #ffff00 !important; /* Yellow text */
+    font-size: 24px !important; /* Large text for visibility */
+    font-weight: bold !important;
+    padding: 50px !important;
+    margin: 0 !important;
+}
+
+/* Giant warning banner */
+body::before {
+    content: "⚠️ ACCESSIBILITY ISSUES ACTIVE - CSS IS WORKING! ⚠️";
+    display: block;
+    background-color: #ff0000 !important;
+    color: #ffffff !important;
+    font-size: 30px !important;
+    font-weight: bold !important;
+    text-align: center !important;
+    padding: 20px !important;
+    margin-bottom: 20px !important;
+    border: 5px solid #000000 !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    z-index: 9999 !important;
+}
+
+/* Make sure the main content is visible below the banner */
+.root {
+    margin-top: 120px !important;
+}
+
+/* Make all text giant and colorful */
+* {
+    font-size: 20px !important;
+    color: #000000 !important;
+    background-color: #ffff00 !important;
+    border: 2px solid #ff0000 !important;
+    padding: 5px !important;
+    margin: 5px !important;
+}
+
+/* Make buttons huge and obvious */
+button, .cmp-button, input[type="button"], input[type="submit"] {
+    background-color: #00ff00 !important;
+    color: #000000 !important;
+    font-size: 32px !important;
+    padding: 20px !important;
+    border: 5px solid #ff0000 !important;
+    width: auto !important;
+    height: auto !important;
+    min-width: 200px !important;
+    min-height: 100px !important;
+}
+
+/* Make links giant */
+a {
+    color: #ff0000 !important;
+    font-size: 28px !important;
+    text-decoration: underline !important;
+    font-weight: bold !important;
+    background-color: #ffff00 !important;
+    padding: 10px !important;
+    border: 3px solid #000000 !important;
+}
+
+/* Make navigation bright and obvious */
+.cmp-navigation {
+    background-color: #00ffff !important;
+    padding: 20px !important;
+    border: 5px solid #ff0000 !important;
+} 

@@ -2,6 +2,8 @@
 
 @import '../base/sass/shared';
 
+/* VISIBILITY TEST - THESE CHANGES SHOULD BE IMMEDIATELY OBVIOUS */
+@import './test-visibility.scss';
 
 /* Elements */
 @import './elements.scss';
