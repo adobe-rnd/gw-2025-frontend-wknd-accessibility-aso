@@ -11,7 +11,8 @@
         width: 100%;
         text-align: left;
         &:focus {
-            outline: none;
+            outline: 2px solid var(--focus-color, #4a9eff);
+outline-offset: 2px;
         }
     }
 
