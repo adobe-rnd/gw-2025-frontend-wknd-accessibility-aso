@@ -16,7 +16,7 @@
 /* WKND Teaser Styles */
 
 $teaser-light-color: #fff;
-$teaser-dark-color: $text-color;
+$teaser-dark-color: #000000; /* Fixed: use proper black instead of red text-color */
 
 @import 'styles/default';
 @import 'styles/featured';
