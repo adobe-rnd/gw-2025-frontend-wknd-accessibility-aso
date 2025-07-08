@@ -30,6 +30,7 @@
 
     .cmp-teaser__pretitle {
         font-weight: bold;
+        color: #000000; /* Ensure WCAG AA compliance */
     }
     .cmp-teaser__content {
         float: left;
