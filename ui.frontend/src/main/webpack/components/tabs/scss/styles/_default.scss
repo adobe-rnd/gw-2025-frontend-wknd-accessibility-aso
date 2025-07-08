@@ -18,6 +18,17 @@
         border-bottom:1px solid transparent;
         padding:.5rem 1rem;
         cursor:pointer;
+        position: relative;
+        
+        /* Enhanced accessibility styles */
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+        
+        &[aria-selected="true"] {
+            background-color: $black;
+            color: $white;
+        }
         &:focus {
             outline: 2px solid var(--focus-color, #4a9eff);
 outline-offset: 2px;
