@@ -68,7 +68,14 @@
         font-size: $font-size-small;
         padding: 1em 2.5em;
         font-weight: $font-weight-bold;
-        color: $text-color;
+        color: #000000; /* Fixed: ensure WCAG AA compliance */
+        
+        &:hover,
+        &:focus {
+            color: #000000;
+            outline: 2px solid #005fcc;
+            outline-offset: 2px;
+        }
         float: left;
         border-radius: $button-border-radius;
     }
